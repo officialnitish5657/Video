@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Simple Code Editor</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.css">
+
+    <style>
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            margin: 0;
+
+            padding: 0;
+
+            background-color:#262626;
+
+        }
+
+        .navbar {
+
+            background-color: #333;
+
+            color: white;
+
+            padding: 10px 20px;
+
+            text-align: center;
+
+            font-size: 24px;
+
+            position: fixed;
+
+            width: 100%;
+
+            top: 0;
+
+            left: 0;
+
+        }
+
+        .editor-container {
+
+            width: 80%;
+
+            max-width: 800px;
+
+            margin: 100px auto 0;
+
+            padding: 20px;
+
+            background-color: #cccccc;
+
+            border: 1px solid #ddd;
+
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius:20px ;
+        }
+
+        .editor-title {
+
+            font-size: 18px;
+
+            margin-bottom: 10px;
+
+            color: #4d4d4d;
+
+        }
+
+        .CodeMirror {
+
+            border: 1px solid #ddd;
+
+            height: 400px;
+
+        }
+      #code{
+        padding:5px 2px 3px 2px;
+        color:red;
+      }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="editor-container">
+        <div class="editor-title">CSS</div>
+        <textarea id="code" name="code"></textarea>
+    </div>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/javascript/javascript.min.js"></script>
+    <script>
+
+        var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+
+            lineNumbers: true,
+
+            mode: "javascript",
+
+            theme: "default"
+
+        });
+
+    </script>
+
+</body>
+
+</html>
+
